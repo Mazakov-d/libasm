@@ -2,19 +2,16 @@ section .text
 	global ft_strlen
 
 	ft_strlen:
-		xor rcx, rcx
+		xor rax, rax
 
 
 		.loop:
-			mov al, [rdi]
-
-			cmp al, 0
+			cmp byte [rdi + rax], 0
 			je .done
-
-			inc rdi
-			inc rcx
+			inc rax
 			jmp .loop
 		
 		.done:
-			mov rax, rcx
 			ret
+
+section .note.GNU-stack noalloc noexec nowrite progbits
