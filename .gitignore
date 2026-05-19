@@ -1,0 +1,6 @@
+test
+libasm.a
+.obj
+*test*
+test*
+*test
