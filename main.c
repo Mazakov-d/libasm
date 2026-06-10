@@ -46,8 +46,8 @@ int main(void)
 
 	ft_write(1, "--write--\n", 10);
 	errno = 0;
-	ft_write(1, "writing -1 to test errno\n", 25);
-	ft_write(1, NULL, -1);
+	ft_write(1, "writing NULL to test errno\n", 27);
+	ft_write(1, NULL, 1);
 	if (errno)
 		perror(NULL);
 
